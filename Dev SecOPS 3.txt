@@ -1,0 +1,18 @@
+cat /proc/cpuinfo --------------- cpu haqda melumat verir
+
+free -h -----------------ram haqda melumat verir
+
+df -h ---------------hard dısk hada melumat
+
+scp  t.txt orxan@192.168.68.15:/home/milli --------burda dosyanı wındowsdan lınuxa atma gosterdık
+
+linuxda windowsa dosya transferi :
+
+sudo dnf install cifs-utils -------lazım olan tool
+
+mkdir -p /mnt/windows ----wındowsu baglayacaqımız dosyanı qurma
+
+mount -t cifs //192.168.68.45/Linux  /mnt/windows -o username=test---------- wındowsda kı klasörü lınuxa baglamaq
+
+df -ht --------yoxlamaq üçün
+

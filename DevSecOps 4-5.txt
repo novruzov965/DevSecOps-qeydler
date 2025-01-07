@@ -1,0 +1,114 @@
+vi /etc/netplan/50-ckoud-init.yaml ---------- netvorkda net plan ayarlamam
+
+network:
+ version: 2 
+	ethernets:	
+	 enp0s3: 
+	dhcp4: no 	
+	addresses: [192.168.0.106/24] 
+	routes:	
+	 - to: default 	
+	via: 192.168.0.1 			
+	nameservers: 		
+	addresses: [192.168.0.1,8.8.8.8]
+
+netplan apply---------netplanı qosma
+
+lsblk --------hadısklerı ve bölünmüş partısınları görme
+
+fdisk /dev/sdb ---------partısına bölme:
+
+Command(m for contain):n
+
+Selecct(default p): (enter)
+
+partition number(1-4 default 1):
+
+fist seckor : (enter)
+
+last sector:+6G ----------partısının olcusun nızmlama
+
+command:w 
+
+-----------------------------------------------------------------------------------------------------
+
+
+mkfs.ext4 /dev/sdb1 -----------------file sistemverme ext4 formadında ve /dev/sda1 partısınına
+
+mkdir a --------mount elemek üçün a qovluqu yaratdıq
+
+mount /dev/sda1 a --------a qovluqunu sda1 file sisttemıolan partsına bagladıq
+
+df -hT -------baxmaq üçün
+
+touch kitab{0..100}.txt---------ardıcıl nomrelı 100 qeder txt dosya qurma (ardıcıl bele yaradmaqı bilmırdım)
+
+du -sh ----------qovluqun ıcındekılerın ölcusun oyrenme (bilmirdım)
+
+
+
+bu rebot eledıkde gedıyınden bunu mountu  fstab tapda kayd eleme 
+
+nano /etc/fstap 
+
+/dev/sda1  /a	ext4 	defaults 0 0 ---------bunu kayd edende eror vererse rebot edın duzelır
+
+uname -a  --------Linux sürümün öyrenme
+
+uptime >ısleme.txt ----sıstemın ne qeder müddetdı ısledıyını gösterme 
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+pvs --------plıysical volume: volın diske baxmaq
+
+vgs -------- volume quqrupa baxma	
+
+lvs ----------loceakal volin baxma
+
+sudo lvmdiskscan ---------sşstem lvm qurduqda görmurse edın
+
+pvcreate /dev/sdc ------------ pvc yaratmaq /dev/sdc dıskınnde
+
+vgcreate alma /dev/sdc -------volume qurup yaratma  alma adında :)
+
+mkdir armud ------burda armud klasörün yaradıqkı armu klasörüne lvc baglayaq
+
+lvcreate -L 4G -n armud  alma  ---------lvc yaratdıq -L den ölçüsün teyün etdık -n ile filenın adın dedık balayacaqımız ve adı alma olan vgs baglayıırq
+
+mkfs.ext4 /dev/mapper/alma -armud---------file sistem yaratma
+
+mount /dev/mapper/alma -armud /armud ----------mount elemek 
+
+lvextend -r -L +1G /dev/mapper/alma-armud --------burda lvc armudu artırma
+
+lvextend -r -L -1G /dev/mapper/alma-armud -------burda azaltma
+
+vgextend  alma /dev/sdd ----hardıskı volume qurupa elave elemek
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
