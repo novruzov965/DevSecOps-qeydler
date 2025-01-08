@@ -1,0 +1,42 @@
+useradd orxan -----------orxan kulanıcısı olusdurma
+
+userdel orxan ---------orxan kulanıcısını sılme
+
+userdel -r orxan ------kulanıcının dızınınde sılır
+
+useradd -d /home/itimuser -p password itimuser----------- burda d dızını p pasword teyin edir
+
+passwd orxan ---------orxan kulanıcısına sifre teyin eleme
+
+groupadd data -------data qurupun yaratma
+
+usermod -l newusername oldusername --------Kullanıcının oturum açma adını değiştirir.	
+
+usermod -d /new/home/dir username ----------Kullanıcının ana dizinini değiştirir.	
+
+usermod -m -d /new/home/dir username---------Kullanıcının ana dizininin içeriğini yeni dizine taşır.	
+
+
+usermod -u 1002 username-----------------Bir kullanıcının UID'sini değiştirir.	
+
+usermod -g newgroup username--------------Kullanıcının birincil grubunu değiştirir.	
+
+usermod -aG group1,group2 username-----------Kullanıcıyı ek gruplara ekler.	
+
+usermod -L username------------Kullanıcı hesabını kilitler.	
+
+
+usermod -U username---------------Kullanıcı hesabının kilidini açar.	
+
+usermod -s /bin/bash username---------Kullanıcının oturum açma kabuğunu değiştirir.	
+
+usermod -p 'newpassword' username----------Bir kullanıcının şifresini değiştirir.	
+
+usermod -e 2022-12-31 username----------------Bir kullanıcı hesabının son kullanma tarihini ayarlar.	
+
+
+
+
+
+
+
