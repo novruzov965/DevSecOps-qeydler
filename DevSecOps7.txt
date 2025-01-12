@@ -1,0 +1,29 @@
+apt install tar* -y---------------------------tar iad tooları ındır 
+
+yum install tar* -y -------------------------alma lınuxda ınıdrme
+
+tar -cvf etc.tar /etc/ ------------------etc faılın tar formasına salma
+
+tar cfz etc.gz /etc/ ------------------etc failın gz sonlu sıxısdırma
+
+sudo yum install bz2 -----------bz2 install
+
+tar -cvjf etc.tar.bz2 /etc/ ----------bz2 formatında sıkısdırmak
+
+tar -xvf etc.gz etc/hosts ----------etc.gz ıcınden  etc/host qovluqun cıxartma
+
+tar -xvf etc.gz --strip-components=1 etc/hosts ------sadece etc qovluquq oladan olmadan hosts cıxartma
+
+tar -xvf etc.gz -C /etc --strip-components=1 etc/hosts ------------- host failını  etz.gz cıxardıb pramoy etc ıcıne tasıma
+
+tar -rvf esc.gz newfail ----------qurulmus gz tarının ıcıne basqa fail eleve elemek
+
+tar tvf dosyaismi.tar.gz ------------tar gz ıcındekılerı görme
+
+
+
+
+
+
+
+
